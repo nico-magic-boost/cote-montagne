@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" role="img" aria-label="Côté Montagne — Saint-Lary">
   <defs>
     <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0"    stop-color="#E9D28F"/>
-      <stop offset=".5"   stop-color="#C9A961"/>
-      <stop offset="1"    stop-color="#8C6B2E"/>
+      <stop offset="0"    stop-color="#e8cfa5"/>
+      <stop offset=".5"   stop-color="#d8b576"/>
+      <stop offset="1"    stop-color="#c9a56b"/>
     </linearGradient>
   </defs>
 
-  <!-- Mountain "M" silhouette -->
-  <g fill="#0A0A0A">
+  <!-- Mountain "M" silhouette in gold -->
+  <g fill="#d8b576">
     <path d="M180 370
              L260 70
              L330 70
@@ -34,7 +34,7 @@
         font-style="italic"
         font-weight="600"
         font-size="110"
-        fill="#0A0A0A"
+        fill="#151111"
         transform="rotate(-6 90 170)">Côté</text>
 
   <!-- "Montagne" bottom band -->
@@ -43,7 +43,7 @@
         font-style="italic"
         font-weight="600"
         font-size="92"
-        fill="#0A0A0A">Montagne</text>
+        fill="#151111">Montagne</text>
 
   <!-- "St Lary" top-right -->
   <text x="560" y="230"
@@ -51,6 +51,6 @@
         font-style="italic"
         font-weight="500"
         font-size="58"
-        fill="#0A0A0A"
+        fill="#151111"
         transform="rotate(-4 590 230)">St Lary</text>
 </svg>
