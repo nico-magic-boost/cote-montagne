@@ -5,17 +5,17 @@
 
 :root {
   /* Encres */
-  --ink: #0A0A0A;            /* noir profond — titres */
-  --ink-soft: #1F1F1F;
+  --ink: #151111;            /* noir profond — titres */
+  --ink-soft: #3A3535;
   --ink-muted: #5A5A5A;
-  --ink-faint: #8A8A8A;
+  --ink-faint: #8b8888;
 
   /* Or — palette Art Déco */
-  --gold: #C9A961;           /* doré principal */
-  --gold-light: #E9D28F;     /* doré clair */
-  --gold-bright: #D9BE7A;
-  --gold-dark: #8C6B2E;      /* doré profond */
-  --gold-deep: #6E5320;
+  --gold: #d8b576;           /* doré principal */
+  --gold-light: #e8cfa5;     /* doré clair */
+  --gold-bright: #dfc18b;
+  --gold-dark: #c9a56b;      /* doré profond */
+  --gold-deep: #a88050;
 
   /* Fonds */
   --bg: #FFFFFF;             /* fond principal — blanc pur */
