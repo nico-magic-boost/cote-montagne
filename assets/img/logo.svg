@@ -1,56 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" role="img" aria-label="Côté Montagne — Saint-Lary">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Côté Montagne — Saint-Lary">
   <defs>
-    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0"    stop-color="#e8cfa5"/>
-      <stop offset=".5"   stop-color="#d8b576"/>
-      <stop offset="1"    stop-color="#c9a56b"/>
-    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+      .handwritten { font-family: 'Fraunces', Georgia, serif; font-style: italic; }
+    </style>
   </defs>
 
-  <!-- Mountain "M" silhouette in gold -->
-  <g fill="#d8b576">
-    <path d="M180 370
-             L260 70
-             L330 70
-             L370 250
-             L430 70
-             L500 70
-             L560 370
-             L490 370
-             L455 190
-             L405 370
-             L345 370
-             L300 200
-             L260 370 Z"/>
+  <!-- Mountain "M" silhouette in white -->
+  <g fill="white">
+    <path d="M 180 380
+             L 260 80
+             L 340 80
+             L 390 280
+             L 450 80
+             L 530 80
+             L 600 380
+             L 520 380
+             L 480 180
+             L 410 380
+             L 340 380
+             L 290 200
+             L 240 380
+             Z"/>
   </g>
 
-  <!-- Gold Art Déco hairline framing the M -->
-  <path d="M180 385 H560" stroke="url(#goldStroke)" stroke-width="1.5" fill="none"/>
-  <path d="M210 400 H530" stroke="url(#goldStroke)" stroke-width="0.8" fill="none"/>
-
-  <!-- Script wordmark — "Côté" top-left -->
-  <text x="60" y="170"
-        font-family="'Fraunces', Georgia, serif"
-        font-style="italic"
+  <!-- "Côté" top-left - italic with rotation -->
+  <text x="80" y="180"
+        class="handwritten"
         font-weight="600"
-        font-size="110"
-        fill="#151111"
-        transform="rotate(-6 90 170)">Côté</text>
+        font-size="100"
+        fill="white"
+        transform="rotate(-8 130 160)">Côté</text>
 
-  <!-- "Montagne" bottom band -->
-  <text x="120" y="420"
-        font-family="'Fraunces', Georgia, serif"
-        font-style="italic"
+  <!-- "Montagne" bottom - italic -->
+  <text x="140" y="430"
+        class="handwritten"
         font-weight="600"
-        font-size="92"
-        fill="#151111">Montagne</text>
+        font-size="100"
+        fill="white">Montagne</text>
 
-  <!-- "St Lary" top-right -->
-  <text x="560" y="230"
-        font-family="'Fraunces', Georgia, serif"
-        font-style="italic"
+  <!-- "St Lary" top-right - smaller italic -->
+  <text x="500" y="220"
+        class="handwritten"
         font-weight="500"
-        font-size="58"
-        fill="#151111"
-        transform="rotate(-4 590 230)">St Lary</text>
+        font-size="60"
+        fill="white"
+        transform="rotate(-5 560 210)">St Lary</text>
 </svg>
