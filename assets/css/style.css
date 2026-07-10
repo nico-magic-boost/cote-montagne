@@ -6,16 +6,16 @@
 :root {
   /* Encres */
   --ink: #151111;            /* noir profond — titres */
-  --ink-soft: #3A3535;
-  --ink-muted: #5A5A5A;
-  --ink-faint: #8b8888;
+  --ink-soft: #2A2620;
+  --ink-muted: #6A6360;
+  --ink-faint: #9A9390;
 
   /* Or — palette Art Déco */
   --gold: #d8b576;           /* doré principal */
   --gold-light: #e8cfa5;     /* doré clair */
-  --gold-bright: #dfc18b;
+  --gold-bright: #dfc494;
   --gold-dark: #c9a56b;      /* doré profond */
-  --gold-deep: #a88050;
+  --gold-deep: #b8944a;
 
   /* Fonds */
   --bg: #FFFFFF;             /* fond principal — blanc pur */
@@ -497,6 +497,112 @@ h3 {
 }
 .muted { color: var(--ink-muted); }
 .site-footer .muted { color: rgba(255, 255, 255, 0.55); }
+
+/* -------- Store & Review Cards -------- */
+.store-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: #FAFAF7;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: all 0.3s ease;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.store-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 28px rgba(201, 169, 97, 0.12);
+  transform: translateY(-2px);
+}
+.store-card-header {
+  margin-bottom: 1.5rem;
+}
+.store-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+.store-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.15) 0%, rgba(201, 169, 97, 0.08) 100%);
+  color: var(--gold-dark);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.store-card-info {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+.store-card p {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+}
+.store-card p:first-child {
+  margin-top: 0;
+}
+.store-rating {
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 0.75rem !important;
+}
+.store-card-link {
+  font-weight: 600;
+  color: var(--gold-dark);
+  align-self: flex-start;
+  margin-top: auto;
+}
+.store-card:hover .store-card-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+}
+
+.review-card {
+  padding: 1.5rem;
+  background: #FAFAF7;
+  border-radius: 6px;
+  border-left: 3px solid var(--gold);
+  transition: all 0.2s ease;
+}
+.review-card:hover {
+  box-shadow: var(--shadow-md);
+  background: #F5F1E8;
+}
+
+.schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.schedule li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+}
+.schedule li:last-child {
+  border-bottom: none;
+}
+.schedule li span:first-child {
+  font-weight: 500;
+  color: var(--ink);
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+.schedule li span:last-child {
+  text-align: right;
+  flex: 1;
+  color: var(--ink-muted);
+}
 
 /* -------- Responsive -------- */
 @media (max-width: 720px) {
