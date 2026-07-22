@@ -16,8 +16,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
 
   <script type="application/ld+json">
   {
@@ -50,7 +51,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="brand" aria-label="Côté Montagne — accueil">
-        <img src="assets/img/logo.png" alt="Côté Montagne — boutique décoration Saint-Lary" class="brand-logo" width="280" height="168" />
+        <picture>
+          <source srcset="assets/img/logo.webp" type="image/webp">
+          <img src="assets/img/logo.png" alt="Côté Montagne — boutique décoration Saint-Lary" class="brand-logo" width="280" height="168" />
+        </picture>
         <span class="brand-name">Côté Montagne</span>
       </a>
       <nav class="site-nav" aria-label="Navigation principale">
@@ -217,7 +221,10 @@
 
   <footer class="site-footer">
     <div class="container" style="text-align: center; margin-bottom: 0; padding-top: 3rem; padding-bottom: 2rem; border-bottom: 2px solid rgba(216, 181, 118, 0.4);">
+      <picture>
+      <source srcset="assets/img/logo.webp" type="image/webp">
       <img src="assets/img/logo.png" alt="Côté Montagne" style="height: 100px; width: auto; margin: 0 auto 1rem; opacity: 0.95;" />
+    </picture>
     </div>
     <div class="container footer-grid">
       <div>
