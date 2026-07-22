@@ -605,6 +605,32 @@ h3 {
   color: var(--ink-muted);
 }
 
+/* -------- Logo styling -------- */
+.brand-logo {
+  filter: drop-shadow(0 0 1px rgba(216, 181, 118, 0.15));
+  transition: filter 0.3s ease;
+}
+.brand:hover .brand-logo {
+  filter: drop-shadow(0 2px 4px rgba(216, 181, 118, 0.3));
+}
+
+/* Logo in footer */
+.site-footer img[alt="Côté Montagne"] {
+  filter: brightness(1.15) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  transition: filter 0.3s ease;
+}
+.site-footer img[alt="Côté Montagne"]:hover {
+  filter: brightness(1.25) drop-shadow(0 4px 12px rgba(216, 181, 118, 0.3));
+}
+
+/* Footer logo container styling */
+.site-footer > .container[style*="text-align: center"] {
+  padding-top: 3rem !important;
+  padding-bottom: 2rem !important;
+  border-bottom: 2px solid rgba(216, 181, 118, 0.4) !important;
+  margin-bottom: 2rem !important;
+}
+
 /* -------- Responsive -------- */
 @media (max-width: 720px) {
   .site-nav { display: none; }
