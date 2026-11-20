@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs>
+<filter id="g0" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="824"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b0" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="831"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+<filter id="g1" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="525"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b1" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="532"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+<filter id="g2" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="488"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b2" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="495"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+<filter id="g3" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="645"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b3" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="652"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+<filter id="g4" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="629"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b4" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="636"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+<filter id="g5" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="813"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b5" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="820"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+<filter id="g6" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="191"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b6" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="198"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+<filter id="g7" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.11" numOctaves="5" seed="97"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0"/></filter>
+<filter id="b7" x="0" y="0" width="100%" height="100%"><feTurbulence type="turbulence" baseFrequency="0.003 0.06874999999999999" numOctaves="2" seed="104"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 0.92  0 0 0 0 0.8  0 0 0 0.28 -0.12"/></filter>
+</defs>
+<rect x="0" y="0" width="1200" height="110" fill="rgb(38,29,22)"/>
+<rect x="0" y="0" width="1200" height="110" filter="url(#g0)"/>
+<rect x="0" y="0" width="1200" height="110" filter="url(#b0)"/>
+<rect x="0" y="0" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="2" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="445" y="0" width="2" height="110" fill="#000" fill-opacity="0.44000000000000006"/>
+<rect x="0" y="110" width="1200" height="130" fill="rgb(38,29,22)"/>
+<rect x="0" y="110" width="1200" height="130" filter="url(#g1)"/>
+<rect x="0" y="110" width="1200" height="130" filter="url(#b1)"/>
+<rect x="0" y="110" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="112" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="949" y="110" width="2" height="130" fill="#000" fill-opacity="0.44000000000000006"/>
+<rect x="0" y="240" width="1200" height="110" fill="rgb(38,29,22)"/>
+<rect x="0" y="240" width="1200" height="110" filter="url(#g2)"/>
+<rect x="0" y="240" width="1200" height="110" filter="url(#b2)"/>
+<rect x="0" y="240" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="242" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="705" y="240" width="2" height="110" fill="#000" fill-opacity="0.44000000000000006"/>
+<rect x="0" y="350" width="1200" height="110" fill="rgb(38,29,22)"/>
+<rect x="0" y="350" width="1200" height="110" filter="url(#g3)"/>
+<rect x="0" y="350" width="1200" height="110" filter="url(#b3)"/>
+<rect x="0" y="350" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="352" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="930" y="350" width="2" height="110" fill="#000" fill-opacity="0.44000000000000006"/>
+<rect x="0" y="460" width="1200" height="130" fill="rgb(38,29,22)"/>
+<rect x="0" y="460" width="1200" height="130" filter="url(#g4)"/>
+<rect x="0" y="460" width="1200" height="130" filter="url(#b4)"/>
+<rect x="0" y="460" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="462" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="938" y="460" width="2" height="130" fill="#000" fill-opacity="0.44000000000000006"/>
+<rect x="0" y="590" width="1200" height="130" fill="rgb(38,29,22)"/>
+<rect x="0" y="590" width="1200" height="130" filter="url(#g5)"/>
+<rect x="0" y="590" width="1200" height="130" filter="url(#b5)"/>
+<rect x="0" y="590" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="592" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="841" y="590" width="2" height="130" fill="#000" fill-opacity="0.44000000000000006"/>
+<rect x="0" y="720" width="1200" height="90" fill="rgb(38,29,22)"/>
+<rect x="0" y="720" width="1200" height="90" filter="url(#g6)"/>
+<rect x="0" y="720" width="1200" height="90" filter="url(#b6)"/>
+<rect x="0" y="720" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="722" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="336" y="720" width="2" height="90" fill="#000" fill-opacity="0.44000000000000006"/>
+<rect x="0" y="810" width="1200" height="90" fill="rgb(38,29,22)"/>
+<rect x="0" y="810" width="1200" height="90" filter="url(#g7)"/>
+<rect x="0" y="810" width="1200" height="90" filter="url(#b7)"/>
+<rect x="0" y="810" width="1200" height="2" fill="#000" fill-opacity="0.55"/>
+<rect x="0" y="812" width="1200" height="1" fill="#fff" fill-opacity="0.138"/>
+<rect x="547" y="810" width="2" height="90" fill="#000" fill-opacity="0.44000000000000006"/>
+</svg>
