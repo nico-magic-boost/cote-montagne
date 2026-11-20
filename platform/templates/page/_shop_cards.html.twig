@@ -1,0 +1,12 @@
+<div class="cards-2">
+  {% for shop in shops %}
+    <article class="info-card shop-card" data-reveal>
+      <span class="eyebrow">{{ shop.tagline }}</span>
+      <h3><a href="{{ path('boutique', {slug: shop.slug}) }}">{{ shop.name }}</a></h3>
+      <p>{{ shop.street }}, 65170 Saint-Lary-Soulan</p>
+      <p><a href="tel:{{ shop.phoneIntl }}">{{ shop.phone }}</a></p>
+      <p>{{ shop.hoursNote }}</p>
+      <a class="link-arrow" href="{{ path('boutique', {slug: shop.slug}) }}">Horaires et sélections <span aria-hidden="true">→</span></a>
+    </article>
+  {% endfor %}
+</div>

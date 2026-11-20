@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ shop.title }}{% endblock %}
+{% block description %}{{ shop.description }}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{{ {
+  '@context': 'https://schema.org',
+  '@type': 'Store',
+  'name': shop.name,
+  'url': 'https://cote-montagne.fr' ~ path('boutique', {slug: shop.slug}),
+  'telephone': shop.phoneIntl,
+  'address': {
+    '@type': 'PostalAddress',
+    'streetAddress': shop.street,
+    'addressLocality': 'Saint-Lary-Soulan',
+    'postalCode': '65170',
+    'addressCountry': 'FR'
+  }
+}|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))|raw }}
+</script>
+{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Boutique {{ shop.name }}</span>
+    <h1>{{ shop.tagline }} à Saint-Lary-Soulan</h1>
+    <p class="lead">{{ shop.intro }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container cards-2">
+    <div class="info-card" data-reveal>
+      <span class="eyebrow">Adresse</span>
+      <h3>{{ shop.street }}</h3>
+      <p>65170 Saint-Lary-Soulan, Hautes-Pyrénées</p>
+      <p><a href="tel:{{ shop.phoneIntl }}">{{ shop.phone }}</a></p>
+      {% if shop.email %}<p><a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>{% endif %}
+      <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query={{ (shop.name ~ ' ' ~ shop.street ~ ' Saint-Lary-Soulan')|url_encode }}" target="_blank" rel="noopener">Voir sur la carte <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="info-card" data-reveal>
+      <span class="eyebrow">Horaires</span>
+      <dl class="hours">
+        {% for row in shop.hours %}<dt>{{ row[0] }}</dt><dd>{{ row[1] }}</dd>{% endfor %}
+      </dl>
+      <p>{{ shop.hoursNote }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-wood">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="eyebrow">Nos sélections</span>
+        <h2>Ce que vous trouverez chez {{ shop.name }}</h2>
+      </div>
+    </div>
+    <div class="services services-3">
+      {% for item in shop.selections %}
+        <article class="service" data-reveal>
+          <span class="service-num">0{{ loop.index }}</span>
+          <h3>{{ item[0] }}</h3>
+          <p>{{ item[1] }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <h2>Nos deux boutiques</h2>
+    </div>
+    {{ include('page/_shop_cards.html.twig') }}
+  </div>
+</section>
+{% endblock %}

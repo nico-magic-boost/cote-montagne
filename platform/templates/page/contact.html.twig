@@ -17,18 +17,22 @@
     <div class="info-card" data-reveal>
       <span class="eyebrow">Téléphone</span>
       <h3><a href="tel:+33562402335">05 62 40 23 35</a></h3>
-      <p>Tous les jours, 9h30 – 20h (horaires variables selon la saison).</p>
+      <p>Studio et boutique Côté Montagne. Horaires variables selon la saison.</p>
     </div>
     <div class="info-card" data-reveal>
       <span class="eyebrow">E-mail</span>
       <h3><a href="mailto:contact@cote-montagne.fr">contact@cote-montagne.fr</a></h3>
       <p>Joignez quelques photos ou plans de votre lieu si vous en avez.</p>
     </div>
-    <div class="info-card" data-reveal>
-      <span class="eyebrow">Boutiques</span>
-      <h3>Rue Vincent Mir</h3>
-      <p>43 rue Vincent Mir, 65170 Saint-Lary-Soulan</p>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <h2>Nos boutiques</h2>
     </div>
+    {{ include('page/_shop_cards.html.twig') }}
   </div>
 </section>
 {% endblock %}

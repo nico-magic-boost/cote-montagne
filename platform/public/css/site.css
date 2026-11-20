@@ -84,7 +84,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.1;
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .brand img { width: 104px; height: auto; }
-.nav { display: flex; align-items: center; gap: 2.4rem; }
+.nav { display: flex; align-items: center; gap: 2rem; }
 .nav a {
   position: relative; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase;
   text-decoration: none; color: var(--ink);
@@ -98,7 +98,7 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.1;
 .nav a.btn-dark:hover { color: var(--ink); }
 .nav-toggle { display: none; background: none; border: 0; padding: .5rem; cursor: pointer; color: var(--ink); }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .nav-toggle { display: block; }
   .nav {
     position: fixed; inset: 76px 0 auto 0; flex-direction: column; align-items: stretch; gap: 0;
@@ -252,3 +252,19 @@ h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; line-height: 1.1;
 
 .section-wood .eyebrow, .section-wood .section-head .link-arrow { color: var(--ink); }
 .page-hero .eyebrow { color: var(--ink-soft); }
+
+.shop-card h3 a { text-decoration: none; }
+.shop-card .link-arrow { margin-top: 1.2rem; }
+.hours { display: grid; grid-template-columns: auto 1fr; gap: .5rem 1.6rem; margin: .4rem 0 1.2rem; }
+.hours dt { font-weight: 600; }
+.hours dd { margin: 0; color: var(--ink-muted); }
+.faq { max-width: 52rem; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); padding: 1.3rem 0; }
+.faq summary { cursor: pointer; font: 600 1.2rem var(--font-serif); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--gold-deep); font-family: var(--font-sans); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { color: var(--ink-muted); margin: .8rem 0 0; }
+.services-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .services-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .services-3 { grid-template-columns: 1fr; } }

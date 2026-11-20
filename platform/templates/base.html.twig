@@ -32,7 +32,8 @@
       <nav class="nav" id="nav" aria-label="Navigation principale">
         <a href="{{ path('prestations') }}" {% if current == 'prestations' %}aria-current="page"{% endif %}>Prestations</a>
         <a href="{{ path('realisations') }}" {% if current == 'realisations' %}aria-current="page"{% endif %}>Réalisations</a>
-        <a href="{{ path('a_propos') }}" {% if current == 'a_propos' %}aria-current="page"{% endif %}>À propos</a>
+        <a href="{{ path('boutiques') }}" {% if current in ['boutiques', 'boutique'] %}aria-current="page"{% endif %}>Boutiques</a>
+        <a href="{{ path('a_propos') }}" {% if current == 'a_propos' %}aria-current="page"{% endif %}>Qui sommes-nous</a>
         <a href="{{ path('contact') }}" class="btn btn-dark">Parlons de votre projet</a>
       </nav>
     </div>
@@ -53,17 +54,17 @@
           <ul>
             <li><a href="{{ path('prestations') }}">Prestations</a></li>
             <li><a href="{{ path('realisations') }}">Réalisations</a></li>
-            <li><a href="{{ path('a_propos') }}">À propos</a></li>
+            <li><a href="{{ path('decoration_saint_lary') }}">Décoration à Saint-Lary</a></li>
+            <li><a href="{{ path('a_propos') }}">Qui sommes-nous</a></li>
             <li><a href="{{ path('contact') }}">Contact</a></li>
           </ul>
         </div>
         <div>
           <h4>Boutiques</h4>
           <ul>
-            <li>Côté Montagne</li>
-            <li>L'Écrin</li>
-            <li>Rue Vincent Mir, Saint-Lary-Soulan</li>
-            <li>Tous les jours, 9h30 – 20h</li>
+            <li><a href="{{ path('boutique', {slug: 'cote-montagne'}) }}">Côté Montagne</a> · 43 rue Vincent Mir</li>
+            <li><a href="{{ path('boutique', {slug: 'lecrin'}) }}">L'Écrin</a> · 35 rue Vincent Mir</li>
+            <li>65170 Saint-Lary-Soulan</li>
           </ul>
         </div>
         <div>

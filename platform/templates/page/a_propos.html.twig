@@ -1,13 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}À propos — Charlène & Thibault, Côté Montagne à Saint-Lary-Soulan{% endblock %}
-{% block description %}Côté Montagne, studio de décoration et deux boutiques à Saint-Lary-Soulan, fondés par Charlène et Thibault.{% endblock %}
+{% block title %}Qui sommes-nous — Charlène et Thibault Prat, Côté Montagne{% endblock %}
+{% block description %}Charlène et Thibault Prat, sœur et frère nés à Saint-Lary-Soulan, ont fondé Côté Montagne : studio de décoration d'intérieur et deux boutiques rue Vincent Mir.{% endblock %}
 
 {% block body %}
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow">À propos</span>
-    <h1>Une histoire de montagne et de maisons</h1>
+    <span class="eyebrow">Qui sommes-nous</span>
+    <h1>Charlène & Thibault, deux regards, une passion</h1>
+    <p class="lead">Sœur et frère, nés à Saint-Lary-Soulan. Ils connaissent la montagne dans ses forêts, ses pierres, ses vieux chalets, ses hivers de poudreuse et ses étés de randonnée.</p>
   </div>
 </section>
 
@@ -15,26 +16,20 @@
   <div class="container split">
     <div class="split-visual" data-reveal>Photo à venir · Charlène & Thibault</div>
     <div data-reveal>
-      <h2>Charlène & Thibault</h2>
-      <p>Côté Montagne est né à Saint-Lary-Soulan d'une conviction : un intérieur réussi raconte le lieu où il se trouve. Bois, laine, pierre et lumière des sommets guident chacun de nos projets.</p>
-      <p>Charlène imagine les intérieurs, de la première esquisse aux vues 3D. Thibault pilote les projets, les commandes et les artisans, pour que tout arrive au bon moment.</p>
-      <p>Dans nos deux boutiques, Côté Montagne et L'Écrin, vous retrouvez les pièces que nous aimons utiliser dans nos projets.</p>
+      <h2>Une conviction : un intérieur raconte son lieu</h2>
+      <p>Côté Montagne est né de l'idée qu'une décoration authentique transforme un logement en lieu de vie. Un plaid en laine, une lampe à la lumière feutrée, une senteur de pin : chaque pièce est un morceau de Pyrénées qu'on ramène chez soi.</p>
+      <p><strong>Charlène</strong> imagine les intérieurs : palette de couleurs, matières, agencement, sélection de chaque pièce, du premier conseil aux vues 3D.</p>
+      <p><strong>Thibault</strong> pilote les projets : commandes, artisans, budget et calendrier, jusqu'à l'installation.</p>
     </div>
   </div>
 </section>
 
 <section class="section section-soft">
-  <div class="container cards-2">
-    <div class="info-card" data-reveal>
-      <h3>Côté Montagne</h3>
-      <p>Mobilier, luminaires, linge de maison et décoration.</p>
-      <p>43 rue Vincent Mir, 65170 Saint-Lary-Soulan</p>
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <h2>Retrouvez-nous en boutique</h2>
     </div>
-    <div class="info-card" data-reveal>
-      <h3>L'Écrin</h3>
-      <p>Cadeaux, senteurs et souvenirs des Pyrénées.</p>
-      <p>Rue Vincent Mir, 65170 Saint-Lary-Soulan</p>
-    </div>
+    {{ include('page/_shop_cards.html.twig') }}
   </div>
 </section>
 

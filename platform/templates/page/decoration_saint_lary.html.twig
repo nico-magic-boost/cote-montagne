@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Décoration d'intérieur à Saint-Lary-Soulan — Côté Montagne{% endblock %}
+{% block description %}Décoration et design d'intérieur à Saint-Lary-Soulan : conseil déco, design 3D, home staging et aménagement complet de chalets et appartements, plus deux boutiques de décoration montagne rue Vincent Mir.{% endblock %}
+
+{% set faq = [
+  ['Quelle prestation choisir pour mon chalet ?', 'Le conseil déco suffit pour rafraîchir une ou deux pièces. Le design 3D permet de valider un projet plus large avant d\'acheter. L\'aménagement complet convient quand vous voulez déléguer tout le projet, des commandes à l\'installation.'],
+  ['Peut-on voir les meubles avant de les choisir ?', 'Oui. Une partie des pièces que nous proposons dans nos projets est exposée dans la boutique Côté Montagne, 43 rue Vincent Mir.'],
+  ['Le home staging convient-il à une location saisonnière ?', 'Oui. Un logement bien aménagé et bien photographié se démarque sur les plateformes de location, ce qui compte particulièrement dans une station comme Saint-Lary.'],
+] %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{{ {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faq|map(q => {'@type': 'Question', 'name': q[0], 'acceptedAnswer': {'@type': 'Answer', 'text': q[1]}})
+}|json_encode(constant('JSON_UNESCAPED_UNICODE') b-or constant('JSON_UNESCAPED_SLASHES'))|raw }}
+</script>
+{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Décoration · Saint-Lary-Soulan</span>
+    <h1>Décoration d'intérieur à Saint-Lary-Soulan</h1>
+    <p class="lead">Côté Montagne est un studio de décoration et d'aménagement installé à Saint-Lary-Soulan, dans les Hautes-Pyrénées. Charlène et Thibault, sœur et frère nés à Saint-Lary, conçoivent et réalisent des intérieurs de chalets et d'appartements, et tiennent deux boutiques de décoration rue Vincent Mir.</p>
+  </div>
+</section>
+
+<section class="section section-wood">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="eyebrow">Ce que nous faisons</span>
+        <h2>Cinq façons de vous accompagner</h2>
+      </div>
+      <a class="link-arrow" href="{{ path('prestations') }}">Détail des prestations <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="services">
+      {% for service in services %}
+        <article class="service" data-reveal>
+          <span class="service-num">0{{ loop.index }}</span>
+          {% include '_icon.html.twig' with {name: service.icon} only %}
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.summary }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="eyebrow">Styles</span>
+        <h2>Quatre styles de décoration montagne</h2>
+      </div>
+      <a class="link-arrow" href="{{ path('realisations') }}">Nos réalisations <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="styles">
+      {% for style in styles %}
+        <article class="style-card" data-reveal>
+          <span class="eyebrow">Style 0{{ loop.index }}</span>
+          <h3>{{ style.title }}</h3>
+          <p>{{ style.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="eyebrow">Boutiques</span>
+        <h2>Nos boutiques de décoration à Saint-Lary</h2>
+      </div>
+    </div>
+    {{ include('page/_shop_cards.html.twig') }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <h2>Questions fréquentes</h2>
+    </div>
+    <div class="faq">
+      {% for q in faq %}
+        <details data-reveal>
+          <summary>{{ q[0] }}</summary>
+          <p>{{ q[1] }}</p>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{{ include('page/_cta.html.twig') }}
+{% endblock %}
