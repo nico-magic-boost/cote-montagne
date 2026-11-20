@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Côté Montagne — Décoration et design d'intérieur à Saint-Lary-Soulan{% endblock %}
+{% block description %}Conseil déco, design 3D, home staging et aménagement complet de chalets et appartements à Saint-Lary-Soulan. Deux boutiques de décoration rue Vincent Mir.{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Côté Montagne",
+  "url": "https://cote-montagne.fr/",
+  "telephone": "+33562402335",
+  "email": "contact@cote-montagne.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "43 rue Vincent Mir",
+    "addressLocality": "Saint-Lary-Soulan",
+    "postalCode": "65170",
+    "addressCountry": "FR"
+  },
+  "areaServed": "Hautes-Pyrénées",
+  "sameAs": ["https://www.instagram.com/cote_montagne/"]
+}
+</script>
+{% endblock %}
+
+{% block body %}
+<section class="hero">
+  <svg class="hero-ridge" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="currentColor" d="M0 400V250l140-90 120 70 170-170 160 140 110-60 190 150 130-110 170 120 150-80 100 50v130z"/>
+  </svg>
+  <div class="container hero-inner">
+    <span class="eyebrow">Studio de décoration · Saint-Lary-Soulan</span>
+    <h1>Des intérieurs qui racontent <em>la montagne</em></h1>
+    <p class="lead">Conseil, design 3D, home staging et aménagement complet. Nous imaginons et réalisons des chalets et des appartements à votre image, au cœur des Pyrénées.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="{{ path('contact') }}">Parlons de votre projet</a>
+      <a class="btn btn-ghost" href="{{ path('realisations') }}">Voir nos réalisations</a>
+    </div>
+    <div class="hero-meta">
+      <span><strong>Pyrénées</strong>Saint-Lary-Soulan</span>
+      <span><strong>Deux boutiques</strong>Rue Vincent Mir</span>
+      <span><strong>7 jours sur 7</strong>9h30 – 20h</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="eyebrow">Prestations</span>
+        <h2>Du premier conseil à la dernière finition</h2>
+      </div>
+      <a class="link-arrow" href="{{ path('prestations') }}">Toutes les prestations <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="services">
+      {% for service in services %}
+        <article class="service" data-reveal>
+          <span class="service-num">0{{ loop.index }}</span>
+          {% include '_icon.html.twig' with {name: service.icon} only %}
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.summary }}</p>
+          <a class="link-arrow" href="{{ path('prestations') }}#{{ service.slug }}">En savoir plus <span aria-hidden="true">→</span></a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="eyebrow">Réalisations</span>
+        <h2>Quatre façons d'habiter la montagne</h2>
+      </div>
+      <a class="link-arrow" href="{{ path('realisations') }}">Voir les projets <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="styles">
+      {% for style in styles %}
+        <a class="style-card" href="{{ path('realisations') }}" data-reveal>
+          <span class="eyebrow">Style 0{{ loop.index }}</span>
+          <h3>{{ style.title }}</h3>
+          <p>{{ style.text }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div>
+        <span class="eyebrow">Notre méthode</span>
+        <h2>Un projet serein, étape par étape</h2>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal><h3>Rencontre</h3><p>Nous découvrons votre lieu, vos usages et vos envies.</p></div>
+      <div class="step" data-reveal><h3>Conception</h3><p>Ambiance, plans et vues 3D pour valider ensemble chaque choix.</p></div>
+      <div class="step" data-reveal><h3>Devis détaillé</h3><p>Chaque meuble, chaque matière et chaque intervention chiffrés clairement.</p></div>
+      <div class="step" data-reveal><h3>Réalisation</h3><p>Commandes, artisans, livraison et installation : nous nous occupons de tout.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="split-visual" data-reveal>Photo à venir · Charlène & Thibault</div>
+    <div data-reveal>
+      <span class="eyebrow">À propos</span>
+      <h2>Charlène & Thibault, passionnés de montagne</h2>
+      <p>Côté Montagne est né à Saint-Lary-Soulan d'une conviction : un intérieur réussi raconte le lieu où il se trouve. Bois, laine, pierre et lumière des sommets guident chacun de nos projets.</p>
+      <p>Nous travaillons avec des marques choisies et des artisans de la vallée pour créer des lieux de vie authentiques, pensés pour durer.</p>
+      <a class="link-arrow" href="{{ path('a_propos') }}">Notre histoire <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+{{ include('page/_cta.html.twig') }}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prestations — Conseil déco, design 3D, home staging à Saint-Lary | Côté Montagne{% endblock %}
+{% block description %}Conseil déco, design 3D, home staging, aménagement complet de chalets et appartements à Saint-Lary-Soulan et dans la vallée d'Aure.{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Prestations</span>
+    <h1>Un accompagnement à la mesure de votre projet</h1>
+    <p class="lead">Un simple conseil pour une pièce ou la transformation complète d'un chalet : choisissez le niveau d'accompagnement qui vous convient.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% for service in services %}
+      <article class="service-row" id="{{ service.slug }}" data-reveal>
+        <span class="service-num">0{{ loop.index }}</span>
+        <div>
+          {% include '_icon.html.twig' with {name: service.icon} only %}
+          <h2>{{ service.title }}</h2>
+        </div>
+        <div>
+          <p class="lead">{{ service.summary }}</p>
+          <ul>
+            {% for point in service.points %}<li>{{ point }}</li>{% endfor %}
+          </ul>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{{ include('page/_cta.html.twig') }}
+{% endblock %}

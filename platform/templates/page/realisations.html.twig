@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réalisations — Chalets et appartements décorés à Saint-Lary | Côté Montagne{% endblock %}
+{% block description %}Nos projets de décoration et d'aménagement à Saint-Lary-Soulan : quatre styles montagne, du chalet chaleureux à l'intérieur minéral.{% endblock %}
+
+{% block body %}
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Réalisations</span>
+    <h1>Quatre façons d'habiter la montagne</h1>
+    <p class="lead">Chaque projet part d'un lieu et de ceux qui y vivent. Voici les univers que nous aimons créer ; les photos des chantiers arrivent bientôt.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container styles">
+    {% for style in styles %}
+      <article class="style-card" data-reveal>
+        <span class="eyebrow">Style 0{{ loop.index }}</span>
+        <h2>{{ style.title }}</h2>
+        <p>{{ style.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{{ include('page/_cta.html.twig') }}
+{% endblock %}

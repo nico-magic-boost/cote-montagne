@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Côté Montagne{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}">
+  <link rel="canonical" href="https://cote-montagne.fr{{ app.request.pathInfo }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Côté Montagne">
+  <meta property="og:title" content="{{ block('title') }}">
+  <meta property="og:description" content="{{ block('description') }}">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon.svg') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+  <script>document.documentElement.classList.add('js')</script>
+  {% block structured_data %}{% endblock %}
+</head>
+<body>
+  {% set current = app.request.attributes.get('_route') %}
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ path('home') }}" class="brand" aria-label="Côté Montagne, accueil">
+        <img src="{{ asset('img/logo.svg') }}" alt="Côté Montagne — Saint-Lary" width="104" height="64">
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="{{ path('prestations') }}" {% if current == 'prestations' %}aria-current="page"{% endif %}>Prestations</a>
+        <a href="{{ path('realisations') }}" {% if current == 'realisations' %}aria-current="page"{% endif %}>Réalisations</a>
+        <a href="{{ path('a_propos') }}" {% if current == 'a_propos' %}aria-current="page"{% endif %}>À propos</a>
+        <a href="{{ path('contact') }}" class="btn btn-dark">Parlons de votre projet</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block body %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-tagline">Des intérieurs qui racontent la montagne.</p>
+        </div>
+        <div>
+          <h4>Le studio</h4>
+          <ul>
+            <li><a href="{{ path('prestations') }}">Prestations</a></li>
+            <li><a href="{{ path('realisations') }}">Réalisations</a></li>
+            <li><a href="{{ path('a_propos') }}">À propos</a></li>
+            <li><a href="{{ path('contact') }}">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Boutiques</h4>
+          <ul>
+            <li>Côté Montagne</li>
+            <li>L'Écrin</li>
+            <li>Rue Vincent Mir, Saint-Lary-Soulan</li>
+            <li>Tous les jours, 9h30 – 20h</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+33562402335">05 62 40 23 35</a></li>
+            <li><a href="mailto:contact@cote-montagne.fr">contact@cote-montagne.fr</a></li>
+            <li><a href="https://www.instagram.com/cote_montagne/" rel="noopener" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© {{ 'now'|date('Y') }} Côté Montagne · Design & décoration d'intérieur · Saint-Lary-Soulan (65170)</p>
+    </div>
+  </footer>
+
+  <script src="{{ asset('js/site.js') }}" defer></script>
+</body>
+</html>

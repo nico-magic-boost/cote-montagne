@@ -1,0 +1,14 @@
+{# Line icons, 1.5px stroke, drawn on a 48px grid #}
+<svg class="{{ class|default('service-icon') }}" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{% if name == 'conseil' %}
+  <path d="M10 38c2-9 6-14 14-14s12 5 14 14"/><circle cx="24" cy="14" r="7"/><path d="M33 8l5-3M36 14h5"/>
+{% elseif name == 'design3d' %}
+  <path d="M24 5l17 9.5v19L24 43 7 33.5v-19z"/><path d="M7 14.5L24 24l17-9.5M24 24v19"/>
+{% elseif name == 'staging' %}
+  <path d="M6 40h36"/><path d="M10 40V26h28v14"/><path d="M14 26v-5a3 3 0 013-3h14a3 3 0 013 3v5"/><path d="M24 6v6M18 9h12"/>
+{% elseif name == 'amenagement' %}
+  <path d="M6 22L24 7l18 15"/><path d="M10 19v21h28V19"/><path d="M20 40V29h8v11"/><path d="M33 12V7h4v8"/>
+{% elseif name == 'boutique' %}
+  <path d="M8 16h32l-2 24H10z"/><path d="M17 16v-3a7 7 0 0114 0v3"/><path d="M19 26h10"/>
+{% endif %}
+</svg>
